@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>Midenga's Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="nocta images/travis-cover2.jpg"  alt="Travis Scott Jordan Sneakers" id="productImg" style="background-color: inherit;">
+            </div>
+            <div class="product-details">
+                <h1>Travis Scott x Jordan low cut</h1>
+                <p class="price">KES 4,000</p>
+                <div class="color-switches">
+                    
+                    <button class="color-switch black" 
+                            data-color="black" 
+                            data-image="nocta images/travis-jordan-black.jpg">
+
+                        
+                        </button>
+                            
+                    <button class="color-switch brown" 
+                            data-color="brown" 
+                            data-image="nocta images/travis-jordan-brown.jpg" ></button>
+                            
+                    <button class="color-switch yellow" 
+                            data-color="yellow" 
+                            data-image="nocta images/travis-jordan-yellow.jpg"></button>
+
+                            <button class="color-switch blue" 
+                            data-color="blue" 
+                            data-image="nocta images/travis-jordan-blue.jpg"></button>
+
+                            <button class="color-switch green" 
+                            data-color="green" 
+                            data-image="nocta images/travis-jordan-green.jpg"></button>
+
+                </div>
+
+                <button class="addtocart-btn" onclick="addToCart()">
+                    Add to Cart
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+        <div id="cartNotification" class="notification">Item added to cart!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

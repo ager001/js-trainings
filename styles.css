@@ -1,0 +1,315 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22;
+    --background-color: #f9f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+.main-container {
+    max-width: 1200px;
+    width: 90%;
+    padding: 2rem;
+    background-color: #ffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background-color: var(--container-bg, white); /* Match parent background */
+    border-radius: 15px;
+    padding: 20px; /* Creates breathing space */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden; /* Ensures image stays within container */
+
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    background-color: inherit; /* Inherit from parent */
+    mix-blend-mode: multiply; /* Better color integration */
+    object-fit: contain; /* Perfect image positioning */
+    padding: 20px; /* Space between image and container */
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.product-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0.05) 100%
+    );
+    z-index: 1;
+}
+
+.product-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.price {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.color-options {
+    margin: 2rem 0;
+}
+
+.color-switches {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-switch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.color-switch::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: currentColor;
+    pointer-events: none;
+}
+
+.color-switch:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px currentColor;
+}
+
+.color-switch.active {
+    border-color: #fff;
+    box-shadow: 0 0 15px currentColor;
+}
+
+.black { color: black; }
+.brown { color: burlywood; }
+.yellow { color: #f1c40f; }
+.blue{color: lightblue}
+.green{color: green;}
+
+.addtocart-btn {
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.addtocart-btn:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+.cart-count {
+    background-color: #e74c3c;
+    border-radius: 50%;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #27ae60;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    display: none;
+    animation: slideIn 0.5s ease-out;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from { top: -50px; opacity: 0; }
+    to { top: 20px; opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-details h1 {
+        font-size: 2rem;
+    }
+    
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+.product-image {
+    position: relative;
+    overflow: visible;
+    perspective: 1500px;
+    background: transparent;
+    border-radius: 0; /* Remove container border */
+    padding: 0; /* Remove padding */
+    box-shadow: none;
+    overflow: visible;
+    border: none;
+    border-style: none;
+
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 25px 35px rgba(0,0,0,0.2));
+    animation: futuristicFloat 6s ease-in-out infinite;
+    border: none;
+    height: auto;
+    background: transparent;
+    
+}
+
+.product-image img {
+    transform: 
+        translateZ(0) 
+        rotateZ(0deg)
+        rotateX(0deg);
+    backface-visibility: hidden;
+}
+
+/* Add floating animation */
+@keyframes elegantFloat {
+    0% {
+        transform: 
+            translateY(0) 
+            rotateZ(0deg)
+            rotateX(0deg);
+        filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+    }
+    25% {
+        transform: 
+            translateY(-20px) 
+            rotateZ(10deg)
+            rotateX(5deg);
+    }
+    50% {
+        transform: 
+            translateY(0) 
+            rotateZ(0deg)
+            rotateX(0deg);
+    }
+    75% {
+        transform: 
+            translateY(-15px) 
+            rotateZ(-10deg)
+            rotateX(-5deg);
+    }
+    100% {
+        transform: 
+            translateY(0) 
+            rotateZ(0deg)
+            rotateX(0deg);
+    }
+}
+
+/* Add this to your existing .product-image img styles */
+
+.product-image img {
+    animation: elegantFloat 5s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-style: none;
+}
+.product-image img {
+    transition: 
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        filter 0.4s ease,
+        opacity 0.6s ease;
+}
+
+/* Add hover effect */
+.product-image:hover img {
+    animation-duration: 3s;
+    filter: drop-shadow(0 25px 35px rgba(0,0,0,0.3)) 
+           brightness(105%);
+}
+
+.product-image::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(
+        45deg,
+        rgba(68, 150, 255, 0.4),
+        rgba(255, 68, 168, 0.4),
+        rgba(68, 255, 168, 0.4)
+    );
+    z-index: 1;
+    filter: blur(30px);
+    opacity: 0.7;
+    animation: hologramPulse 4s linear infinite;
+}
+
+@keyframes hologramPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}

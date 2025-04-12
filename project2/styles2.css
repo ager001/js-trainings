@@ -1,0 +1,219 @@
+/* styles2.css */
+:root {
+  --primary-color: #000000;
+  --accent-color: #e74c3c;
+  --background-color: #ffffff;
+  --text-color: #2c3e50;
+  --shadow-color: rgba(0,0,0,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+
+.product-card {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem;
+  background: var(--background-color);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px var(--shadow-color);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.product-image {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center bottom;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  filter: drop-shadow(0 20px 30px var(--shadow-color));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateZ(0deg); }
+  50% { transform: translateY(-20px) rotateZ(2deg); }
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.product-description {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.color-options {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.color-swatch.green {
+  background-color: #4CAF50;
+}
+
+.color-swatch.yellow {
+  background-color:yellow;
+}
+
+.color-swatch.black {
+  background-color:black;
+}
+
+.color-swatch.brown{
+  background-color: brown;
+}
+.color-swatch.blue{
+  background-color: blue;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.color-swatch:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.add-to-cart {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2c3e50 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+  transition: all 0.8s ease;
+}
+
+.add-to-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.add-to-cart:hover::before {
+  left: 100%;
+}
+
+.cart-counter {
+  background: var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.cart-notification {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  
+  .product-image {
+    height: 400px;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+  }
+  
+  .nike-logo {
+    width: 50px;
+    top: 15px;
+    left: 15px;
+  }
+}
