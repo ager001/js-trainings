@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>.
+        <title>JSON sample</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            let companies = `[
+                                {
+                                    "name": "Big Pharma",
+                                    "numberOfEmployees": 1000,
+                                    "ceo": "Michael" ,
+                                    "rating": 5.5
+                                },
+                                {
+                                    "name": "Small Pharma",
+                                    "numberOfEmployees": 4,
+                                    "ceo": null ,
+                                    "rating": 3.3
+
+                                }
+
+                            ] `;
+console.log(JSON.parse(companies)[0].numberOfEmployees);
+
+        </script>
+    </body>
+
+</html>
