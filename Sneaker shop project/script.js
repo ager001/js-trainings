@@ -91,3 +91,5 @@ function showNotification(message) {
 
 // Initialize cart on page load
 updateCart();
+
+
