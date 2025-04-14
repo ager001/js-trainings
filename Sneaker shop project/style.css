@@ -101,7 +101,7 @@ a {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url('png images/pic13.png') center/cover no-repeat;
+  background: url('png\ images/cover image.jpg') center/contain;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -110,6 +110,9 @@ a {
   color: #fff;
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.5);
+  background-size: contain;
+  background-repeat: no-repeat;
+  
 }
 
 .hero .container {
@@ -167,11 +170,15 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .shoe-image {
-  max-width: 200px;
-  transition: transform 0.3s;
+  max-width: 250px;
+  margin: 0 auto 1rem;
+  background: radial-gradient(circle, #fff 50%, #f0f0f0 100%);
+  border-radius:0;
+  padding: 1rem;
 }
 
 .featured-shoe:hover .shoe-image {
@@ -220,7 +227,7 @@ a {
   max-width: 250px;
   margin: 0 auto 1rem;
   background: radial-gradient(circle, #fff 50%, #f0f0f0 100%);
-  border-radius: 50%;
+  border-radius:0;
   padding: 1rem;
 }
 
@@ -234,6 +241,13 @@ a {
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;
+}
+.price {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e23744;
+  margin-top: 0.5rem;
 }
 
 /* Footer */
