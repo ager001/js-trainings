@@ -79,7 +79,7 @@ a {
 }
 
 .cart-icon {
-  font-size: 1rem;
+  font-size: 30px;
   color: #333;
 }
 
@@ -91,7 +91,9 @@ a {
   border-radius: 50px;
   font-weight: 500;
   transition: background 0.3s, transform 0.3s;
+  
 }
+
 
 .btn:hover {
   background: #c32f3b;
@@ -235,6 +237,7 @@ a {
   border: none;
 }
 
+
 .product-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -245,6 +248,7 @@ a {
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;
+  
 }
 .price {
   display: block;
