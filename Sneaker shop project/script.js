@@ -1,6 +1,6 @@
 
 // Cart System
-let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+let cartItems = JSON.parse(localStorage.getItem('cart')) || [];//Here the get retrieved from the browser's local storage and if there is no it becomes empty 
 const cartCount = document.getElementById('cart-count');
 const notification = document.getElementById('notification');
 const cartSidebar = document.getElementById('cartSidebar');
@@ -47,7 +47,7 @@ function updateCart() {
   // Update total
   cartTotal.textContent = `KES ${total.toFixed(2)}`;
   
-  // Save to storage
+  // Here the data is saved as main storage in the brower's local storage and later on will be used at the top to retrieve the stored data
   localStorage.setItem('cart', JSON.stringify(cartItems));
   
   // Add delete event listeners
