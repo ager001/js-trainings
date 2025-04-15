@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>.
-        <title>JSON sample</title>
-    </head>
-
-    <body>
-        <h1>JSON TODO LIST</h1>
-
-
-        <script>
-            let users = `[
+[
     {
         "name": "Michael",
         "age": "25",
@@ -38,10 +27,4 @@
 
     }
 
-]`;
-
-        console.log(JSON.parse(user)[1].skills);
-        </script>
-    </body>
-
-</html>
+]
