@@ -18,11 +18,20 @@ let calculation = () => {
 calculation();//in this sector the selected number of items will now portray in the basket icon in the top right corner
 
 //we are generating cartItems using Javascript
-let generateCartItems = () =>{ //we have created a function that when we have data on the basket it will display the data, if there is no data it displays otherwise
+
+//we have created a function that when we have data on the basket it will display the data, if there is no data it displays otherwise
+let generateCartItems = ()=>{ 
         if (basket.length !== 0) {
-            console.log("tina")
+            
         } else{
-            console.log("mike")
+            shoppingCart.innerHTML = ``
+            label.innerHTML = `
+                <h2>Cart is Empty</h2>
+
+                <a href="webstructure.html">
+                    <button class="HomeBtn">Back to home</button>
+                </a>;
+            `
         }
 };
 
