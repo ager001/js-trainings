@@ -37,7 +37,8 @@ let generateShop =() => {
     return (shop.innerHTML = shopItemsData
         .map((x)=>{
         
-        let{id, name, prce, description, img} = x ;
+        let{id, name, prce, description, img} = x;
+        let search = basket.find((x) => x.id === id)  || [] //here we check id of x is present in the basket if not we return an empty array
        return `
       <div  id=product-id-${id} class="item">
             <img width="245" src=${img} alt="">
@@ -48,7 +49,9 @@ let generateShop =() => {
                     <h2>$${prce}</h2>
                     <div class="buttons">
                         <i onclick="increment(${id})" class="bi bi-plus"></i>
-                        <div id=${id} class="quantity">0</div>
+                        <div id=${id} class="quantity">
+                        ${search.item === undefined ? 0: search.item}
+                        </div>
                         <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
                     
                     </div>
@@ -88,20 +91,26 @@ let increment = (id)=> {
 // I have made the decrement to not go past zero
 let decrement = (id)=> {
     let selectedItem = id;
-    let search = basket.find((x)=> x.id === selectedItem.id )
+    let search = basket.find((x)=> x.id === selectedItem.id);
 
-    if(search.item  === 0) return;
+
+    if(search === undefined) return;
+
+    else if(search.item  === 0) return;
         
     else{
         search.item -= 1;
         
     }
-    
+
+    // console.log(basket);
+    update(selectedItem.id);
+    basket = basket.filter((x)=>x.item !== 0 );//in the local storage only the item to be saved but not the ones with zero
+
     // we have stored our data in the browser's local storage
     localStorage.setItem("data", JSON.stringify(basket));
-
-   // console.log(basket);
-    update(selectedItem.id);
+    
+   
 };
 
 // I have updated the function to display the numbers when clicked
@@ -124,3 +133,5 @@ let calculation = () => {
     cartIcon.innerHTML =basket.map((x)=> x.item).reduce((x,y)=> x+y,0);
     
 };
+
+calculation();//in this sector the selected number of items will now portray in the basket icon in the top right corner

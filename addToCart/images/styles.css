@@ -9,6 +9,10 @@ body{
     font-family: sans-serif;
 }
 
+i{
+    cursor: pointer;
+}
+
 /*Nav bar Styling*/
 .navbar{
     display: flex;
