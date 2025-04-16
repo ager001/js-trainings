@@ -1,27 +1,88 @@
 //created ana array with all the shop items data
-let shopItemsData = [{
-    id:"uuehuedsls",
-    name: "Casual Shirt",
-    prce: 45,
-    description: "Men's Wear",
-    img: "img-1.jpg"
-
-}, {
-    id:"byyfyoioo",
-    name: "Official Shirt",
-    prce: 55,
-    description: "Men's Wear",
-    img: "img-2.jpg"
-}, {
-    id:"uuhijoi",
-    name: "T shirt",
-    prce: 15,
-    description: "Men's Wear",
-    img: "img-3.jpg"
-}, {
-    id:"szerftioo",
-    name: "Official Blazer",
-    prce: 110,
-    description: "Men's Wear",
-    img: "img-4.jpg"
-}];
+let shopItemsData = [
+    {
+      id: "jfhgbvnscs",
+      name: "Casual Shirt",
+      prce: 45,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-1.jpg",
+    },
+    {
+      id: "ioytrhndcv",
+      name: "Office Shirt",
+      prce: 100,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-2.jpg",
+    },
+    {
+      id: "wuefbncxbsn",
+      name: "T Shirt",
+      prce: 25,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-3.jpg",
+    },
+    {
+      id: "thyfhcbcv",
+      name: "Mens Suit",
+      prce: 300,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-4.jpg",
+    },
+    {
+      id: "thiecbawdjksadjk",
+      name: "Mens Tie",
+      prce: 25,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-5.png",
+    },
+    {
+      id: "iuertrywebncdjksadjk",
+      name: "Casual shoes",
+      prce: 200,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-6.png",
+    },
+    {
+      id: "thierytbvcbvzdhadjk",
+      name: "black suit",
+      prce: 450,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-7.png",
+    },
+    {
+      id: "trfoiwfcnbcawdjksadjk",
+      name: "polo shirt",
+      prce: 45,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-8.png",
+    },
+    {
+      id: "cbvxbcvsceldk",
+      name: "denim shirt",
+      prce: 85,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-9.png",
+    },
+    {
+      id: "oiopijmjkhuihb",
+      name: "denim pants",
+      prce: 120,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-10.png",
+    },
+    {
+      id: "oiopijewyiohbjhib",
+      name: "basic cap",
+      prce: 35,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-11.png",
+    },
+    {
+      id: "rtytytuyuytyytbvncv",
+      name: "leather boots",
+      prce: 350,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      img: "img-12.png",
+    },
+  ];
+  
