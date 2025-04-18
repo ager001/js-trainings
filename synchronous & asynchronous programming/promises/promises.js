@@ -24,3 +24,5 @@ promise
 
 ).catch(() => console.log("failed!"))
  .finally(() => console.log("My wife"))
+
+
