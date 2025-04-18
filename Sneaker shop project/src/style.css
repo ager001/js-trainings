@@ -117,6 +117,7 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url('png images/cover image.jpg');
 }
 
 .hero-flow .container {
