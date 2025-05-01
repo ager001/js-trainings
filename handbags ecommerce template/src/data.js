@@ -1,0 +1,88 @@
+//created ana array with all the shop items data
+let shopItemsData = [
+    {
+      id: "jfhgbvnscs",
+      name: "Quality designer handbag",
+      prce: 45,
+      description: "Brown Leather Bag.",
+      img: "img-1.jpg",
+    },
+    {
+      id: "ioytrhndcv",
+      name: "Quality designer handbag",
+      prce: 100,
+      description: "Brown Leather Bag.",
+      img: "img-2.jpg",
+    },
+    {
+      id: "wuefbncxbsn",
+      name: "Quality designer handbag",
+      prce: 25,
+      description: "Brown Leather Bag.",
+      img: "img-1.jpg",
+    },
+    {
+      id: "thyfhcbcv",
+      name: "Quality designer handbag",
+      prce: 300,
+      description: "Brown Leather Bag.",
+      img: "img-2.jpg",
+    },
+    {
+      id: "thiecbawdjksadjk",
+      name: "Quality designer handbag",
+      prce: 25,
+      description: "Brown Leather Bag.",
+      img: "img-1.jpg",
+    },
+    {
+      id: "iuertrywebncdjksadjk",
+      name: "Quality designer handbag",
+      prce: 200,
+      description: "Brown Leather Bag.",
+      img: "img-2.jpg",
+    },
+    {
+      id: "thierytbvcbvzdhadjk",
+      name: "Quality designer handbag",
+      prce: 450,
+      description: "Brown Leather Bag.",
+      img: "img-1.jpg",
+    },
+    {
+      id: "trfoiwfcnbcawdjksadjk",
+      name: "Quality designer handbag",
+      prce: 45,
+      description: "Brown Leather Bag.",
+      img: "img-2.jpg",
+    },
+    {
+      id: "cbvxbcvsceldk",
+      name: "Quality designer handbag",
+      prce: 85,
+      description: "Brown Leather Bag.",
+      img: "img-1.jpg",
+    },
+    {
+      id: "oiopijmjkhuihb",
+      name: "Quality designer handbag",
+      prce: 120,
+      description: "Brown Leather Bag.",
+      img: "img-2.jpg",
+    },
+    {
+      id: "oiopijewyiohbjhib",
+      name: "Quality designer handbag",
+      prce: 35,
+      description: "Brown Leather Bag.",
+      img: "img-1.jpg",
+    },
+    {
+      id: "rtytytuyuytyytbvncv",
+      name: "Quality designer handbag",
+      prce: 350,
+      description: "Brown Leather Bag.",
+      img: "img-2.jpg",
+    },
+  ];
+  
